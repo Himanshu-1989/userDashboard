@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
 		userEntity1.setUserLastName(userEntity.getUserLastName());
 		userEntity1.setUserEmail(userEntity.getUserEmail());
 		userRepository.save(userEntity1);
-		return "UserUpdated";
+		return USER_UPDATE_SUCCESS;
 	}
 
 	/**
@@ -70,7 +70,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserEntity AuthenticateUser(UserEntity userEntity) {
 		// TODO Auto-generated method stub
-		String userName = "";
 		UserEntity userEntity1 = userRepository.findByUserName(userEntity.getUserName());
 		return userEntity1;
 	}
@@ -99,7 +98,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public String deleteUser(long id) {
 		userRepository.delete(id);
-		return "UserDeleted";
+		return USER_DELETE_SUCCESS;
 	}
 
 }

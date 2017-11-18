@@ -41,7 +41,7 @@ public class UserController {
 	 * @throws ResourceNotFoundException
 	 */
 	@RequestMapping(value = "/adduser", method = RequestMethod.POST, produces = "application/json")
-	public ResponseEntity<UserCommonResponse> getUser(@RequestBody UserEntity user) throws ResourceNotFoundException {
+	public ResponseEntity<UserCommonResponse> saveUser(@RequestBody UserEntity user) throws ResourceNotFoundException {
 		try {
 			logger.info("add user: enter into AddUser Service");
 			userOperationService.saveData(user);

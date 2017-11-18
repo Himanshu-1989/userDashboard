@@ -1,4 +1,4 @@
-﻿webpackJsonp(["main"],{
+webpackJsonp(["main"],{
 
 /***/ "../../../../../src/$$_gendir lazy recursive":
 /***/ (function(module, exports) {
